@@ -1,5 +1,5 @@
 alias v="nvim"
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias py="python"
 alias rs="kill $(ps -ef | grep -v 'grep' | grep 'sleep 60' | awk 'END {print $2}')"
 alias gs="git status"
