@@ -1,2 +1,0 @@
-# dotfiles
-managing linux dotfiles
