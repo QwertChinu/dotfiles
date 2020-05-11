@@ -1,0 +1,40 @@
+[user]
+	name = Chinmaya Sahoo
+	email = er.compiler@gmail.com
+[core]
+	editor = nvim
+[alias]
+	hist = log --all --graph --decorate --oneline
+
+[merge]
+	tool = meld
+[mergetool "meld"]
+	path = /usr/bin/meld
+[mergetool]
+	prompt = false
+[diff]
+	tool = meld
+[difftool "meld"]
+	path = /usr/bin/meld
+[difftool]
+	prompt = false
+
+# define command which will be used when "nvim" is set as a merge tool
+#[mergetool "nvim"]
+# cmd = "nvim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
+##cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+## set "nvim" as tool for merging
+#[merge]
+#  tool = nvim
+## automatically launch merge tool without displaying a prompt
+#[mergetool]
+#  prompt = false
+#
+#[diff]
+#	tool = nvim
+#[difftool "nvim"]
+#	path = /usr/bin/nvim
+#[difftool]
+#	prompt = false
+[credential]
+	helper = store

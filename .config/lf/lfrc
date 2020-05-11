@@ -1,0 +1,22 @@
+# Basic vars
+set shell sh
+# set previewer ~/.config/lf/scope
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+set color256
+set icons		# Enable icons. Requires nerd fonts and LF_ICONS variable.
+
+# cmds/functions
+
+cmd delete ${{
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm -rf $fx
+}}
+
+# Bindings
+
+map D delete

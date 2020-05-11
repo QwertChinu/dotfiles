@@ -1,0 +1,3 @@
+git clone https://git.suckless.org/dwm
+git clone https://aur.archlinux.org/yay.git
+curl -LO https://www.dropbox.com/s/e15ymnswomqj2dc/ArchConfig.tgz

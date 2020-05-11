@@ -1,0 +1,15 @@
+#!/bin/sh
+
+dpath="/sys/class/backlight/intel_backlight"
+curr=$(grep "" $dpath/brightness)
+max=$(grep "" $dpath/max_brightness)
+
+new=$(echo $curr $1 $max/10 | bc)
+
+if [ $new -gt $max ]
+then
+	new=$max
+fi
+
+echo $new > $dpath/brightness
+

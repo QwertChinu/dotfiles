@@ -1,0 +1,55 @@
+pkg(){
+	upkg=$(pacman -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g")
+	krnl=$(pacman -Qu | grep "linux-lts" | wc -l | sed -e "s/^0$//g")
+	[[ "$upkg" -eq "" ]] && upkg="U"
+	[[ "$krnl" -ne "" ]] && krnl="K" || krnl="P"
+	echo -e "$krnl $upkg"
+}
+mem(){
+        echo -e $(free -h | awk '/^Mem:/ {print $3 "/" $2}')
+}
+cprompt(){
+        [ "$(printf "No\\nYes" | dmenu -i -p "$1" -nb darkred -sb red -sf white -nf gray )" = "Yes" ] && $2
+}
+
+bat(){
+        capacity=$(cat /sys/class/power_supply/"BAT0"/capacity)
+        status=$(cat /sys/class/power_supply/"BAT0"/status)
+        echo -e "$status $capacity%"
+#       if [[ ( "$capacity" -gt "95"  &&  "$status" == "Charging" || "$status" == "Full")  || ( "$capacity" -lt "20"  &&  "$status" == "Discharging" ) ]]; then
+#               mpv /usr/share/sounds/freedesktop/stereo/bell.oga > /dev/null
+#       fi 
+}
+
+volume(){
+
+[ "$(pulsemixer --get-mute)" = "1" ] && printf "🔇\\n" && exit
+
+vol=$(pulsemixer --get-volume | awk '{print $1}')
+
+if [ "$vol" -gt "70" ]; then
+        icon="V"
+elif [ "$vol" -lt "30" ]; then
+        icon="."
+else
+        icon="v"
+fi
+
+echo -e "$icon $vol%"
+}
+
+disk(){
+root_status=$(df -h /dev/sda2 | awk ' /[0-9]/ {print "R " $5} ')
+home_status=$(df -h /dev/sda3 | awk ' /[0-9]/ {print "H " $5} ')
+echo -e "$home_status $root_status"
+}
+
+statusbar(){
+        xsetroot -name " $(mem) | $(bat) | $(disk) | $(pkg) | $(volume) | $(date +"%A %d.%m.%y %H:%M")"
+}
+
+while true
+do
+        statusbar
+        sleep 60    # Update time
+done & 

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+fpath="$HOME/MyDWMArch"
+mkdir -p $fpath
+
+pacman -Qqen > $fpath/repo_pkg.txt
+pacman -Qqem > $fpath/aur_pkg.txt
+
+#awk '{print ","$0}' $fpath/repo_pkg.txt > $fpath/progs.csv 
+#awk '{print "A,"$0}' $fpath/aur_pkg.txt >> $fpath/progs.csv 
+
+#rm $fpath/repo_pkg.txt $fpath/aur_pkg.txt
+cp -pr ~/.bashrc ~/.config ~/.ICAClient ~/.local ~/.xinitrc ~/.xprofile  $fpath/
+rm -rf $fpath/.local/share
+cd $fpath/.config
+find -maxdepth 1 ! -name fontconfig ! -name mpv ! -name . -exec rm -rv {} \;
+tar cvzf $HOME/Dropbox/Public/ArchConfig.tgz -C $fpath .
+rm -rf $fpath
+cd ~
