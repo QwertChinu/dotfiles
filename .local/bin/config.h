@@ -11,7 +11,7 @@ static const char *hibernate[] = { "bash", "hibernet", NULL };
 static const char *capture[] = { "bash", "maimpick",   NULL };
 static const char *screencopy[] = { "bash", "screencopy",   NULL };
 static const char *slock[] = { "slock", NULL };
-static const char *surf[] = { "brave",  NULL };
+static const char *surf[] = { "qutebrowser",  NULL };
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
