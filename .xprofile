@@ -8,4 +8,4 @@ xcompmgr &
 #sudo powertop --auto-tune
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 #( sleep 300; sudo /usr/bin/pacman -Syyuw --noconfirm ) &
-( sleep 120; sudo /usr/bin/pacman -Syyy) &
+( sleep 120; sudo /usr/bin/pacman -Syyy && reset_status) &

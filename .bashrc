@@ -1,9 +1,11 @@
 alias v="nvim"
+alias gbin="cd ~/.local/bin/"
+alias gdwm="cd ~/Downloads/Programs/myconfig/dwm/"
 alias p="sudo pacman"
 alias upkg="sudo /usr/bin/pacman -Syyy"
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias py="python"
-alias rs="kill $(ps -ef | grep -v 'grep' | grep 'sleep 60' | awk 'END {print $2}')"
+alias rs="bash reset_status"
 alias gs="git status"
 alias g="git"
 alias vrc="nvim ~/.config/nvim/init.vim"

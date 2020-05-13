@@ -3,13 +3,13 @@
 #include <X11/XF86keysym.h>
 
 //static const char *upvol[]   = { "/usr/bin/pactl", "set-sink-volume", "0", "+5%",  NULL };
-static const char *upvol[]   = { "bash", "volume", "+5%",  NULL };
-static const char *downvol[] = { "bash", "volume", "-5%",  NULL };
+static const char *upvol[]   = {"volume", "+5%",  NULL };
+static const char *downvol[] = {"volume", "-5%",  NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute",   "0", "toggle",  NULL };
 //static const char *hibernate[] = { "sudo", "systemctl", "suspend", NULL };
-static const char *hibernate[] = { "bash", "hibernet", NULL };
-static const char *capture[] = { "bash", "maimpick",   NULL };
-static const char *screencopy[] = { "bash", "screencopy",   NULL };
+static const char *hibernate[] = {"hibernet", NULL };
+static const char *capture[] = { "maimpick",   NULL };
+static const char *screencopy[] = {"screencopy",   NULL };
 static const char *slock[] = { "slock", NULL };
 static const char *surf[] = { "qutebrowser",  NULL };
 

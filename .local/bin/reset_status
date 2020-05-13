@@ -1,0 +1,3 @@
+#!/bin/sh
+
+kill $(ps -ef | grep -v 'grep' | grep 'sleep 60' | awk 'END {print $2}')

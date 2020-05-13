@@ -1,3 +1,4 @@
 #!/bin/sh
 
-pactl set-sink-volume 0 $1 && kill $(ps -ef | grep -v 'grep' | grep 'sleep 60' | awk 'END {print $2}')
+#pactl set-sink-volume 0 $1 && kill $(ps -ef | grep -v 'grep' | grep 'sleep 60' | awk 'END {print $2}')
+pactl set-sink-volume 0 $1 && bash reset_status
