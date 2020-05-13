@@ -1,18 +1,3 @@
 #!/bin/sh
 
-volume(){
-
-[ "$(pulsemixer --get-mute)" = "1" ] && printf "🔇\\n" && exit
-
-vol=$(pulsemixer --get-volume | awk '{print $1}')
-
-if [ "$vol" -gt "70" ]; then
-        icon="V"
-elif [ "$vol" -lt "30" ]; then
-        icon="."
-else
-        icon="v"
-fi
-
-echo -e "$icon $vol%"
-}
+pactl set-sink-volume 0 $1 && kill $(ps -ef | grep -v 'grep' | grep 'sleep 60' | awk 'END {print $2}')
