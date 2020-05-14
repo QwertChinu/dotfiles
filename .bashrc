@@ -2,7 +2,7 @@ alias v="nvim"
 alias gbin="cd ~/.local/bin/"
 alias gdwm="cd ~/Downloads/Programs/myconfig/dwm/"
 alias p="sudo pacman"
-alias upkg="sudo /usr/bin/pacman -Syyy"
+alias upkg="sudo /usr/bin/pacman -Syyy && reset_status"
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias py="python"
 alias rs="bash reset_status"
