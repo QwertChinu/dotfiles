@@ -12,6 +12,7 @@ static const char *capture[] = { "maimpick",   NULL };
 static const char *screencopy[] = {"screencopy",   NULL };
 static const char *slock[] = { "slock", NULL };
 static const char *surf[] = { "qutebrowser",  NULL };
+static const char *bgh[] = { "bgh",  NULL };
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -90,6 +91,7 @@ static Key keys[] = {
 	{ MODKEY, XK_v, spawn, SHCMD("dropbox &; virtualbox") }, 
 	{ MODKEY,                       XK_a,      spawn,          {.v = calender } },
 	{ MODKEY,                       XK_w,      spawn,          {.v = surf} },
+	{ MODKEY,                       XK_z,      spawn,          {.v = bgh} },
 	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = infocmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = capture } },
 	{ MODKEY,             XK_s,      spawn,          {.v = screencopy} },

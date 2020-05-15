@@ -1,0 +1,3 @@
+#!/bin/sh
+
+qutebrowser $(grep "bhabi-ji-ghar-par-hai" ~/.config/qutebrowser/bookmarks/urls | tail -1 | awk '{print $1}')
