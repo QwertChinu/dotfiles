@@ -7,6 +7,7 @@ bc
 binutils
 bison
 bzip2
+cmake
 coreutils
 cryptsetup
 device-mapper
@@ -52,6 +53,7 @@ iproute2
 iputils
 jbig2dec
 jfsutils
+jupyter
 less
 lf
 libidn
@@ -145,6 +147,7 @@ virtualbox
 virtualbox-guest-iso
 virtualbox-guest-utils
 which
+xautoclick
 xclip
 xcompmgr
 xdman

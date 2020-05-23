@@ -8,6 +8,7 @@ config_version: 2
 settings:
   content.notifications:
     https://tomato-timer.com: false
+    https://www.indiatoday.in: false
     https://www.reddit.com: false
   url.searchengines:
     global:
