@@ -31,12 +31,14 @@ gcc
 gcc-libs
 gcr
 gd
+geckodriver
 gettext
 ghostscript
 git
 glib2-docs
 glibc
 go
+gptfdisk
 graphviz
 grep
 grub
@@ -135,6 +137,7 @@ timeshift
 tmux
 transmission-cli
 ttf-inconsolata
+ttf-jetbrains-mono
 ttf-linux-libertine
 unclutter
 unzip
@@ -146,6 +149,7 @@ vim-live-latex-preview
 virtualbox
 virtualbox-guest-iso
 virtualbox-guest-utils
+vlc
 which
 xautoclick
 xclip

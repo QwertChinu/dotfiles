@@ -1,4 +1,4 @@
-alias v="nvim"
+alias v="vim -Nu ~/.myvimrc"
 alias gbin="cd ~/.local/bin/"
 alias gdwm="cd ~/Downloads/Programs/myconfig/dwm/"
 alias p="sudo pacman"
