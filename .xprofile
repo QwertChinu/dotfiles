@@ -2,10 +2,11 @@ unclutter &
 numlockx &
 xrdb ~/.config/Xresources &
 xcompmgr &
-. ~/.local/bin/setbg /home/chinu/Downloads/Pictures &
-. ~/.local/bin/dwm_status
-. ~/.local/bin/battery
-#sudo powertop --auto-tune
+xset r rate 300 50 &
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+setbg /home/chinu/Downloads/Pictures &
+status &
+battery &
+#sudo powertop --auto-tune
 #( sleep 300; sudo /usr/bin/pacman -Syyuw --noconfirm ) &
-( sleep 120; sudo /usr/bin/pacman -Syyy && reset_status) &
+( sleep 120; sudo /usr/bin/pacman -Syyy && status) &

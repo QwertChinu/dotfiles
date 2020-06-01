@@ -8,9 +8,9 @@ export ZSH="/home/chinu/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="jonathan"
-ZSH_THEME="random"
+#ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -121,7 +121,7 @@ alias v="vim -Nu ~/.myvimrc"
 alias gbin="cd ~/.local/bin/"
 alias gdwm="cd ~/Downloads/Programs/myconfig/dwm/"
 alias p="sudo pacman"
-alias upkg="sudo /usr/bin/pacman -Syyy && reset_status"
+alias upkg="sudo /usr/bin/pacman -Syyy && status"
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias py="python"
 alias gs="git status"

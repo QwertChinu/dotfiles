@@ -2,10 +2,11 @@
 
 while true
 do
-	capacity=$(cat /sys/class/power_supply/"BAT0"/capacity)
-	status=$(cat /sys/class/power_supply/"BAT0"/status)
-	if [[ ( "$capacity" -gt "95"  &&  "$status" == "Charging" || "$status" == "Full")  || ( "$capacity" -lt "20"  &&  "$status" == "Discharging" ) ]]; then
-		mpv /usr/share/sounds/freedesktop/stereo/bell.oga > /dev/null
-	fi
-	sleep 2
+    capacity=$(cat /sys/class/power_supply/"BAT0"/capacity)
+    status=$(cat /sys/class/power_supply/"BAT0"/status)
+    [[ ( "$capacity" -gt "95"  &&  "$status" == "Charging" || "$status" == "Full")\
+    || ( "$capacity" -lt "20"  &&  "$status" == "Discharging" ) ]] && \
+    mpv ~/.cache/bell.oga > /dev/null
+
+    sleep 2
 done &
