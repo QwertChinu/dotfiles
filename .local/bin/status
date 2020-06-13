@@ -1,0 +1,33 @@
+#!/bin/sh
+pkg(){
+    upkg=$(pacman -Qu | grep -v "\[ignored\]" | wc -l | sed -e "s/^0$//g")
+    krnl=$(pacman -Qu | grep "linux-lts" | wc -l | sed -e "s/^0$//g")
+    [[ "$upkg" -eq "" ]] && upkg="U"
+    [[ "$krnl" -ne "" ]] && krnl="K" || krnl="P"
+    echo -e "$krnl $upkg"
+} 
+
+volume(){
+    [ "$(pulsemixer --get-mute)" = "1" ] && printf "Mute" && exit
+    vol=$(pulsemixer --get-volume | awk '{print $1}')
+    echo -e "V $vol%"
+}
+
+battery(){
+    capacity=$(cat /sys/class/power_supply/"BAT0"/capacity)
+    status=$(cat /sys/class/power_supply/"BAT0"/status)
+    echo -e "${status:0:1} $capacity%"
+}
+
+disk(){
+    sizeR=$(df | grep /$ | awk '{print $5}')
+    sizeH=$(df | grep /home$ | awk '{print $5}')
+    echo -e "H $sizeH R $sizeR"
+}
+
+ram(){
+    echo -e $(free -h | awk '/^Mem:/ {print $3 "/" $2}')
+}
+
+xsetroot -name " $(ram) | $(battery) | $(disk) | $(pkg) | $(volume) | \
+$(date +"%a %m/%d %H:%M")"
