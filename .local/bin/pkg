@@ -8,6 +8,7 @@ binutils
 bison
 bzip2
 cmake
+cmatrix
 coreutils
 cryptsetup
 dash
@@ -104,6 +105,7 @@ ranger
 reflector
 reiserfsprogs
 s-nail
+screenkey
 scrot
 sed
 shadow
@@ -137,6 +139,7 @@ texlive-publishers
 texlive-science
 timeshift
 tk
+tlp
 tmux
 transmission-cli
 ttf-inconsolata
@@ -152,12 +155,14 @@ vim-live-latex-preview
 virtualbox
 virtualbox-guest-iso
 virtualbox-guest-utils
+vlc
 which
 xautoclick
 xclip
 xcompmgr
 xdman
 xdotool
+xf86-input-synaptics
 xf86-video-intel
 xf86-video-vmware
 xfsprogs
