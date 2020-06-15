@@ -1,0 +1,4 @@
+SS start bluetooth
+bluetoothctl
+power on
+connect FC:58:FA:87:DB:13
