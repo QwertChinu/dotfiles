@@ -153,6 +153,9 @@ alias pboot='echo "sudo dd bs=4M if=path-to-the-ISO of=/dev/sdX status=progress 
 alias play='mpv ~/Downloads/Video/Patent_Medicine.mkv'
 #alias ls='ls --color=auto'
 alias zrc="v ~/.zshrc"
+alias fm="xset s off && xset -dpms"
+alias nfm="xset s on && xset +dpms"
+alias bt="cat ~/.local/bin/boat"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
