@@ -7,9 +7,13 @@
 config_version: 2
 settings:
   content.notifications:
+    https://ritikart.com: false
     https://tomato-timer.com: false
     https://www.indiatoday.in: false
     https://www.reddit.com: false
+    https://yst.am: false
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: false
   url.searchengines:
     global:
       DEFAULT: https://duckduckgo.com/?q={}

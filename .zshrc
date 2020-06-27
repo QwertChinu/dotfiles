@@ -117,7 +117,7 @@ bindkey -v '^?' backward-delete-char
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-alias v="vim -Nu ~/.myvimrc"
+alias v="nvim"
 alias gbin="cd ~/.local/bin/"
 alias gdwm="cd ~/Downloads/Programs/myconfig/dwm/"
 alias p="sudo pacman"
