@@ -24,6 +24,7 @@ dropbox
 dwm
 e2fsprogs
 efibootmgr
+etcher-bin
 fakeroot
 file
 filesystem
@@ -127,7 +128,6 @@ tk
 tlp
 tmux
 transmission-cli
-ttf-inconsolata
 ttf-jetbrains-mono
 ttf-linux-libertine
 unclutter
