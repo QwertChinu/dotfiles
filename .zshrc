@@ -156,6 +156,7 @@ alias zrc="v ~/.zshrc"
 alias fm="xset s off && xset -dpms"
 alias nfm="xset s on && xset +dpms"
 alias bt="cat ~/.local/bin/boat"
+alias pm="mpv --no-video"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
