@@ -139,7 +139,7 @@ alias SS="sudo systemctl"
 alias rw="sudo systemctl restart NetworkManager"
 alias yt="youtube-dl --add-metadata -i -o '%(upload_date)s-%(title)s.%(ext)s'"
 alias yta="yt -x -f bestaudio/best"
-alias upd="p -Qqe > ~/.local/bin/pkg && cfg commit -am 'Arch System update' && cfg push && sudo timeshift-gtk && yay -Syu"
+alias upd="psync && p -Qqe > ~/.local/bin/pkg && cfg commit -am 'Arch System update' && cfg push && sudo timeshift-gtk && yay -Syu"
 #alias upd=". ~/.local/bin/backup_dot && sudo timeshift-gtk && yay -Syu"
 alias bkp="sudo timeshift-gtk"
 alias tsmm="watch -n 10 transmission-remote -l"
@@ -158,7 +158,7 @@ alias nfm="xset s on && xset +dpms"
 alias bt="cat ~/.local/bin/boat"
 alias pm="mpv --no-video"
 alias cssh="ssh 'chinu@192.168.1.103'"
-alias psync="rsync -aAXv chinu@192.168.1.103:/var/cache/pacman/pkg/ /var/cache/pacman/pkg"
+alias psync="sudo rsync -aAXv chinu@192.168.1.103:/var/cache/pacman/pkg/ /var/cache/pacman/pkg"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
