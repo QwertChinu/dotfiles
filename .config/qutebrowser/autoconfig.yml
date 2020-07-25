@@ -10,6 +10,7 @@ settings:
     https://ritikart.com: false
     https://tomato-timer.com: false
     https://www.indiatoday.in: false
+    https://www.justdial.com: false
     https://www.reddit.com: false
     https://yst.am: false
   content.register_protocol_handler:
