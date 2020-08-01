@@ -12,6 +12,7 @@ settings:
     https://www.indiatoday.in: false
     https://www.justdial.com: false
     https://www.reddit.com: false
+    https://www.yst.am: false
     https://yst.am: false
   content.register_protocol_handler:
     https://mail.google.com?extsrc=mailto&url=%25s: false
