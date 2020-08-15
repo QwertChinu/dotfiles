@@ -157,8 +157,8 @@ alias fm="xset s off && xset -dpms"
 alias nfm="xset s on && xset +dpms"
 alias bt="cat ~/.local/bin/boat"
 alias pm="mpv --no-video"
-alias cssh="ssh 'chinu@192.168.1.103'"
-alias psync="sudo rsync -aAXv chinu@192.168.1.103:/var/cache/pacman/pkg/ /var/cache/pacman/pkg"
+alias cssh="ssh 'chinu@192.168.1.104'"
+alias psync="sudo rsync -aAXv chinu@192.168.1.104:/var/cache/pacman/pkg/ /var/cache/pacman/pkg"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
