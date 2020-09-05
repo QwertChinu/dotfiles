@@ -10,3 +10,5 @@ battery &
 #sudo powertop --auto-tune
 #( sleep 300; sudo /usr/bin/pacman -Syyuw --noconfirm ) &
 ( sleep 120; sudo /usr/bin/pacman -Syyy && status) &
+#echo $((16*1024*1024)) | sudo tee /proc/sys/vm/dirty_background_bytes
+#echo $((16*1024*1024)) | sudo tee /proc/sys/vm/dirty_bytes
