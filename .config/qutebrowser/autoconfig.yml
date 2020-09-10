@@ -10,7 +10,9 @@ settings:
     https://compare.buyhatke.com: false
     https://www.google.com: false
   content.notifications:
+    https://0.directednotconverted.ml: false
     https://compare.buyhatke.com: false
+    https://directednotconverted.ml: false
     https://ritikart.com: false
     https://tomato-timer.com: false
     https://www.indiatoday.in: false

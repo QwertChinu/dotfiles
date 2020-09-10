@@ -175,3 +175,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+alias play="mpv https://www.youtube.com/watch\?v\=p0wEe5GEHuk"
